@@ -32,13 +32,58 @@ nav {
 }
 .navLinks ul li a {
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.2rem 0.5rem;
   margin: auto 0.5rem;
+  border-radius: 0.5rem;
+}
+.navLinks ul li a:hover {
+  background-color: rgb(119, 181, 236);
+  color: white;
 }
 
 /* Home Page  */
-
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+.greeting {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 15% auto;
+}
+.greeting span {
+  color: rgb(51, 0, 255);
+  font-size: 3.5rem;
+}
+.greeting button {
+  background-color: rgb(54, 130, 244);
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+}
+.img img {
+  width: 30rem;
+  animation: floating infinite 4s;
+}
 
 
 /* Login Page */
 
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+  }
+}
