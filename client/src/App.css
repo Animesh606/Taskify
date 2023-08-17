@@ -1,0 +1,44 @@
+
+/* Navbar */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  font-size: 1.2rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo img {
+  width: 4rem;
+}
+.logo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.navLinks ul {
+  display: flex;
+  flex-direction: row;
+}
+.navLinks ul li {
+  list-style: none;
+}
+.navLinks ul li a {
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: auto 0.5rem;
+}
+
+/* Home Page  */
+
+
+
+/* Login Page */
+
