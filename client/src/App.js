@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/LoginPage';
 import SignUp from './Pages/SignUpPage';
+import Error404 from './Pages/Error404';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path='dashboard' element={<Dashboard/>} />
           <Route path='login' element={<Login/>} />
           <Route path='signup' element={<SignUp/>} />
-          <Route path='*' element={<SignUp/>} />
+          <Route path='*' element={<Error404/>} />
         </Route>
       </Routes>
     </>

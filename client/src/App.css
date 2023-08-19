@@ -32,7 +32,7 @@ nav {
 }
 .navLinks ul li a {
   text-decoration: none;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   margin: auto 0.5rem;
   border-radius: 0.5rem;
 }
@@ -40,6 +40,9 @@ nav {
   background-color: rgb(119, 181, 236);
   color: white;
 }
+
+
+
 
 /* Home Page  */
 .main-container {
@@ -59,19 +62,92 @@ nav {
   color: rgb(51, 0, 255);
   font-size: 3.5rem;
 }
-.greeting button {
+.greeting a {
+  text-decoration: none;
+  font-size: 1.3rem;
   background-color: rgb(54, 130, 244);
   color: white;
   padding: 0.7rem 2rem;
   border-radius: 2rem;
 }
+.greeting a:hover {
+  background-color: rgb(5, 62, 112);
+}
 .img img {
+  margin: 10%;
   width: 30rem;
+  border-radius: 2rem;
   animation: floating infinite 4s;
 }
 
 
 /* Login Page */
+.login {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 25%;
+  padding: 2rem;
+}
+.login h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0.8rem 0;
+}
+.form-group svg {
+  margin: 0.5rem 0;
+}
+.form-data {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-style: hidden;
+  border-bottom: 2px solid black;
+  text-align: left;
+}
+.form-data:focus {
+  outline: none;
+}
+.form-group div {
+  display: flex;
+}
+.submit-button {
+  width: 40%;
+  background-color: rgb(37, 110, 37);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.7rem 1rem;
+  margin: 1rem;
+  font-weight: 600;
+}
+.submit-button:hover {
+  background-color: rgb(6, 139, 6);
+  cursor: pointer;
+}
+.form-remainder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2rem;
+}
+.login a {
+  text-align: left;
+  text-decoration: none;
+}
+.react-icon {
+  width: 3rem;
+}
 
 
 @keyframes floating {
