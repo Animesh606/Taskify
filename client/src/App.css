@@ -102,10 +102,8 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 0.8rem 0;
-}
-.form-group svg {
-  margin: 0.5rem 0;
 }
 .form-data {
   width: 100%;
@@ -146,7 +144,8 @@ nav {
   text-decoration: none;
 }
 .react-icon {
-  width: 3rem;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 

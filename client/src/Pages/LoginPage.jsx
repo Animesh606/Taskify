@@ -50,7 +50,7 @@ const Login = () => {
                                 <FaKey className='react-icon'/>
                             </label>
                             <input type={(showPassword) ? "text" : "password"} className='form-data' id='password' name="password" placeholder="Password" value={data.password} onChange={inputData}/>
-                            {(showPassword) ? <FaEyeSlash className='react-icon' onClick={()=>setShowPassword(false)}/> : <FaEye className='react-icon' onClick={()=>setShowPassword(true)}/>}
+                            {(showPassword) ? <FaEye className='react-icon' onClick={()=>setShowPassword(false)}/> : <FaEyeSlash className='react-icon' onClick={()=>setShowPassword(true)}/>}
                         </div>
                         <div className='form-remainder'>
                             <div className='form-group'>
