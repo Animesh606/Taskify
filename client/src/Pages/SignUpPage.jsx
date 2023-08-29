@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from './../Assets/6914347.jpg';
+import logo from '../Components/Assets/6914347.jpg';
 import { FaUserCircle, FaKey, FaMobileAlt, FaExclamation } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { PiPasswordFill } from "react-icons/pi";

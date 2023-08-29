@@ -1,14 +1,18 @@
 import { Link, Outlet } from 'react-router-dom';
-import logo from './../logo.svg';
+import logo from '../../logo.svg';
+import { FaBars } from 'react-icons/fa';
+import { useState } from 'react';
+
 const Navbar = () => {
+    const [show, setShow] = useState(false);
     return (
         <>
-            <nav>
+            <nav className='navbar'>
                 <div className='logo'>
                     <img src={logo} alt="logo" />
                     <span id='appName'>Taskify</span>
                 </div>
-                <div className='navLinks'>
+                <div className={`navLinks ${(show) ? 'responsive' : ''}`}>
                     <ul>
                         <li>
                             <Link to='/'>Home</Link>
@@ -27,6 +31,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
+                <FaBars className={`react-icon bar ${(show) ? 'responsive' : ''}`} title='Menu' onClick={() => setShow(!show)}/>
             </nav>
             <Outlet/>
         </>
