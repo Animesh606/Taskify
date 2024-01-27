@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Import Routers
-import userRouter from "./Routers/userRouter";
+import userRouter from "./Routers/userRouter.js";
 
 app.use("/api/user", userRouter);
 

@@ -1,5 +1,5 @@
-import ApiResponse from "./ApiResponse";
-import ApiError from "./ApiError";
-import AsyncHandler from "./AsyncHandler";
+import ApiResponse from "./ApiResponse.js";
+import ApiError from "./ApiError.js";
+import AsyncHandler from "./AsyncHandler.js";
 
 export { ApiError, ApiResponse, AsyncHandler };

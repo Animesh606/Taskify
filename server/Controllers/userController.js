@@ -1,7 +1,7 @@
-import User from "../Models/UserModel";
-import { asyncHandler, ApiResponse, ApiError } from "../Utils";
+import User from "../Models/UserModel.js";
+import { AsyncHandler, ApiResponse, ApiError } from "../Utils/index.js";
 
-const registerUser = asyncHandler(async (req, res) => {
+const registerUser = AsyncHandler(async (req, res) => {
 
     // Form data from frontend
     const { firstName, lastName, email, mobile, password } = req.body;
@@ -22,16 +22,23 @@ const registerUser = asyncHandler(async (req, res) => {
     });
     await newUser.save();
 
-    return ApiResponse(201, "User Successfully Registered");
+    return new ApiResponse(201, "User Successfully Registered");
 })
 
-const loginUser = asyncHandler(async (req, res) => {
+const loginUser = AsyncHandler(async (req, res) => {
 
     // Form data from frontend
     const { email, password } = req.body;
 
-    // check user exist and password is correct
+    // email or password empty or not
+    if (!email || !password) {
+        throw new ApiError(400, "Email and Password are required fields.");
+    }
+
+    // find the user by email
     const user = await User.findOne({email});
+
+    // check user exist and password is correct
     if(!user || !(await user.isPassword(password))) {
         throw new ApiError(401, 'Invalid Email or Password');
     }
@@ -41,14 +48,19 @@ const loginUser = asyncHandler(async (req, res) => {
     return res.status(200)
     .cookie("accessToken", accessToken, {httpOnly : true, secure : true})
     .json(
-        new ApiResponse(200, "Logged In", {
+        new ApiResponse(200, "Login Successful!!", {
             user,
             accessToken
         })
     )
 })
 
+const getUser = AsyncHandler(async (req, res) => {
+
+});
+
 export {
     registerUser,
-    loginUser
+    loginUser,
+    getUser
 }
