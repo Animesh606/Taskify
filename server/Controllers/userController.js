@@ -22,7 +22,9 @@ const registerUser = AsyncHandler(async (req, res) => {
     });
     await newUser.save();
 
-    return new ApiResponse(201, "User Successfully Registered");
+    return res.json(
+        new ApiResponse(201, "User Successfully Registered")
+    );
 })
 
 const loginUser = AsyncHandler(async (req, res) => {
@@ -56,7 +58,11 @@ const loginUser = AsyncHandler(async (req, res) => {
 })
 
 const getUser = AsyncHandler(async (req, res) => {
-
+    const user = await User.findById(req?.userId)?.select("-password");
+    console.log(user);
+    return res.json(
+        new ApiResponse(200, "User Details Retrieved successfully.", user)
+    );
 });
 
 export {
