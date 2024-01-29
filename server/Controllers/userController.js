@@ -58,8 +58,7 @@ const loginUser = AsyncHandler(async (req, res) => {
 })
 
 const getUser = AsyncHandler(async (req, res) => {
-    const user = await User.findById(req?.userId)?.select("-password");
-    console.log(user);
+    const user = await User.findById(req?.userId)?.populate("tasks").select("-password");
     return res.json(
         new ApiResponse(200, "User Details Retrieved successfully.", user)
     );
